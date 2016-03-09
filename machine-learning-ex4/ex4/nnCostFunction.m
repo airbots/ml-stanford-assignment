@@ -62,9 +62,9 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 for i = 1:num_labels
-a1 = [0,X(i,:)];
+a1 = [1,X(i,:)];
 a2 = sigmoid(a1*Theta1');
-a3 = sigmoid([0,a2]*Theta2');
+a3 = sigmoid([1,a2]*Theta2');
 hx = a3;
 tempJ = sum(log(hx)*(-y(i))-log(1-hx)*(1-y(i)))/m;
 J = J + tempJ;
