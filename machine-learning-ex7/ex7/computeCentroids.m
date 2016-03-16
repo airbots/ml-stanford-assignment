@@ -27,11 +27,11 @@ centroids = zeros(K, n);
 %
 counter = zeros(K);
 for i=1:m
-  counter(idx(i)) = counter(idx(i)) + 1
+  counter(idx(i)) = counter(idx(i)) + 1;
   centroids(idx(i),:) = centroids(idx(i),:) + X(i,:);
 end
 for j=1:K
-  countroids(j,:) = countroids(j,:)/counter(j);
+  centroids(j,:) = centroids(j,:)/counter(j);
 end
 
 

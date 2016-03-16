@@ -22,7 +22,7 @@ sigma2 = zeros(n, 1);
 %
 for i=1:n
   mu(i)=sum(X(:,i))/m;
-  sigma2(i) = sum(X(:,i) - mu(i).^2)/m;
+  sigma2(i) = sum((X(:,i) - mu(i)).^2)/m;
 endfor
 
 
